@@ -22,7 +22,7 @@ token = util.prompt_for_user_token(username,
                                    redirect_uri='YOUR-REDIRECT-URL')
 
 def change_song(songQuery):
-    ms = ""
+    msg = ""
     if token:
         sp = spotipy.Spotify(auth=token)
         devices = sp.devices()
