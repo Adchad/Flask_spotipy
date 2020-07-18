@@ -13,13 +13,13 @@ import time
 app = flask.Flask(__name__)
 
 
-username = 'chocoearly2'
+username = 'YOUR-USER-NAME'
 scope = 'user-read-private user-read-playback-state user-modify-playback-state'
 token = util.prompt_for_user_token(username,
                                    scope,
-                                   client_id='773c98b7fc0c4842be656f9e8ab7ad55',
-                                   client_secret='9e5e3c6d81fe49deae6877577000328c',
-                                   redirect_uri='http://localhost:8000')
+                                   client_id='YOUR-CLIENT-ID',
+                                   client_secret='YOUR-CLIENT-SECRET',
+                                   redirect_uri='YOUR-REDIRECT-URL')
 
 def change_song(songQuery):
     ms = ""
@@ -65,7 +65,6 @@ def ntfy(titl,msg):
     notification.notify(
         title=titl,
         message=msg,
-        app_icon='C:\\Users\\chada\\Downloads\\Icons8-Halloween-Ghost-2.ico',  # e.g. 'C:\\icon_32x32.ico'
         timeout=5,  # seconds
     )
 
